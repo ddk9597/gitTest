@@ -2,11 +2,28 @@ html {
   overflow-y: scroll; /* 항상 스크롤바 공간 유지 */
 }
 
-.allTimeExhMapBox{
-  zoom: 0.5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.exhMapBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.allTimeExhMapBox{
+  display: grid;
+}
+
+/* 1080px 이하에서만 Swiper 레이아웃 적용 */
+@media (max-width: 1080px) {
+  .allTimeExhMapBox {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 .allTimeExhList{
@@ -25,8 +42,6 @@ html {
 
 
 .titleBox{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
 }
 
@@ -172,6 +187,10 @@ html {
   animation: highlightFade 2s ease-in-out;
 }
 
+.has-scroll{
+  zoom : 0.5 !important;
+}
+
 @keyframes highlightFade {
   0% {
     box-shadow: 0 0 0px 4px rgba(255, 215, 0, 0.8);
@@ -182,3 +201,181 @@ html {
     background-color: transparent;
   }
 }
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .contentList{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+ /* 1080px 초과: Grid 레이아웃 유지 */
+ @media (min-width: 1081px) {
+   .exhMapSwiper .swiper-wrapper {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 10px;
+     transform: none !important;
+   }
+   
+   .exhMapSwiper .swiper-slide {
+     width: auto !important;
+     margin-right: 0 !important;
+   }
+ }
+
+ /* Swiper 스타일 - 1080px 이하에서만 적용 */
+ @media (max-width: 1080px) {
+   .exhMapSwiper { 
+     --nav-size: 44px;
+     position: relative;
+     width: 100%;
+   }
+   
+   .exhMapSwiper .swiper-wrapper {
+     display: flex;
+   }
+   
+   .exhMapSwiper .swiper-slide { 
+     height: auto;
+     width: 100%;
+     flex-shrink: 0;
+   }
+ }
+
+ .exhMapBox { 
+   padding: 16px; 
+   box-sizing: border-box;
+ }
+
+ @media (max-width: 1080px) {
+   .exhMapBox {
+     width: 100%;
+   }
+ }
+
+ .titleBox .title { 
+   font-weight: 700; 
+   font-size: 20px; 
+ }
+
+ .mt90 { 
+   margin-top: 24px; 
+ }
+
+ .img.floor-map { 
+   position: relative; 
+ }
+
+ .img.floor-map img { 
+   max-width: 100%; 
+   height: auto; 
+   display: block; 
+ }
+
+ /* 지도 위 포지셔닝 요소가 있을 수 있으니 preserve */
+ .floor-exhibit { 
+   position: relative; 
+ }
+
+ .floor-item { 
+   position: absolute; 
+ }
+
+ .floor-text { 
+   user-select: none; 
+ }
+
+ /* 스크롤 가능한 맵 영역 */
+ .has-scroll { 
+   overflow: auto; 
+   -webkit-overflow-scrolling: touch; 
+ }
+
+ /* 네비게이션/페이지네이션 - 1080px 이하에서만 표시 */
+ @media (max-width: 1080px) {
+   .exhMapSwiper .swiper-button-prev,
+   .exhMapSwiper .swiper-button-next {
+     width: var(--nav-size); 
+     height: var(--nav-size);
+     color: #333;
+     background: rgba(255, 255, 255, 0.8);
+     border-radius: 50%;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+   }
+
+   .exhMapSwiper .swiper-button-prev:after,
+   .exhMapSwiper .swiper-button-next:after {
+     font-size: 20px;
+     font-weight: bold;
+   }
+
+   .exhMapSwiper .swiper-button-prev {
+     left: 10px;
+   }
+
+   .exhMapSwiper .swiper-button-next {
+     right: 10px;
+   }
+
+   .exhMapSwiper .swiper-pagination { 
+     position: absolute;
+     bottom: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     margin-top: 8px;
+   }
+
+   .exhMapSwiper .swiper-pagination-bullet {
+     width: 12px;
+     height: 12px;
+     background: #333;
+     opacity: 0.5;
+   }
+
+   .exhMapSwiper .swiper-pagination-bullet-active {
+     opacity: 1;
+     background: #333;
+   }
+ }
+
+ /* 1080px 초과에서는 네비게이션 숨김 */
+ @media (min-width: 1081px) {
+   .exhMapSwiper .swiper-button-prev,
+   .exhMapSwiper .swiper-button-next,
+   .exhMapSwiper .swiper-pagination {
+     display: none !important;
+   }
+ }
+
+ /* 여백 조정 */
+ .floor_00, .floor_01, .floor_02 { 
+   margin-top: 16px; 
+ }
+
+ .content .text { 
+   line-height: 1.6; 
+ }
+
+ /* 반응형 디자인 */
+ @media (max-width: 768px) {
+   .exhMapSwiper .swiper-button-prev,
+   .exhMapSwiper .swiper-button-next {
+     width: 36px;
+     height: 36px;
+   }
+   
+   .exhMapSwiper .swiper-button-prev:after,
+   .exhMapSwiper .swiper-button-next:after {
+     font-size: 16px;
+   }
+   
+   .exhMapSwiper .swiper-button-prev {
+     left: 5px;
+   }
+   
+   .exhMapSwiper .swiper-button-next {
+     right: 5px;
+   }
+ }
