@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 모든 right 박스 숨기기
       rightBoxes.forEach(r => r.classList.remove("active"));
-      // 같은 순서의 right 박스 보이기
+      //test  같은 순서의 right 박스 보이기
       rightBoxes[index].classList.add("active");
     });
   });
