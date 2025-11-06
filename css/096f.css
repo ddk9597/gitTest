@@ -37,7 +37,7 @@ html {
 
 .content .text{
   border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 
@@ -321,7 +321,7 @@ html {
 
    .exhMapSwiper .swiper-pagination { 
      position: absolute;
-     bottom: 10px;
+     bottom: 20px;
      left: 50%;
      transform: translateX(-50%);
      margin-top: 8px;
@@ -347,6 +347,8 @@ html {
    .exhMapSwiper .swiper-pagination {
      display: none !important;
    }
+
+   
  }
 
  /* 여백 조정 */
@@ -378,4 +380,15 @@ html {
    .exhMapSwiper .swiper-button-next {
      right: 5px;
    }
+
+   .floor1 .text4{
+    right: 29px !important;
+    bottom: 116px !important;
+   }
+
+   .floor1 .item2 .floor-text {
+    left: 64% !important;
+    top: 97px !important;
+    transform: translateX(-50%);
+  }
  }
