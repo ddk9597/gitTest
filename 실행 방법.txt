@@ -1,0 +1,1 @@
+main폴더 안의 gogung_example_01.html 파일을 웹 브라우저로 실행합니다.
