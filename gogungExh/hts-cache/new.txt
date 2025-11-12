@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+19:03:58	17623/17623	---MC-	200	added ('OK')	text/html	date:Wed,%2012%20Nov%202025%2010:03:57%20GMT	https://online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/exhibition.do	/Users/ddk9595/workspace/gitTest/gogungExh/online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/exhibition.html	(from )
+19:03:59	4182/4182	---M--	404	error ('Not%20Found')	text/html	etag:W/%224182-1670980584000%22	https://online.gogung.go.kr/robots.txt		(from )
+19:04:00	11098/11098	---MC-	200	added ('OK')	text/html	date:Wed,%2012%20Nov%202025%2010:03:59%20GMT	https://online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/experience.do	/Users/ddk9595/workspace/gitTest/gogungExh/online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/experience.html	(from https://online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/exhibition.do)

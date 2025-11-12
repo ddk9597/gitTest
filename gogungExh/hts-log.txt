@@ -1,0 +1,11 @@
+HTTrack3.49-2 launched on Wed, 12 Nov 2025 19:03:57 at https://online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/exhibition.do
+(winhttrack https://online.gogung.go.kr/onlinemuseum/pgm/onlinemuseumMng/exhibition.do -O "/Users/ddk9595/workspace/gitTest/gogungExh" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 seconds : 3 links scanned, 2 files written (28721 bytes overall) [34842 bytes received at 11614 bytes/sec], 1.5 requests per connection
+(No errors, 0 warnings, 0 messages)
